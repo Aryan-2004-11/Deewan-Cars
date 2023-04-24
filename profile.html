@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Profile Card Template : Tailwind Toolbox</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body
+    class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
+  >
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a href="#" class="logo">
+          <img
+            width="100"
+            height="50"
+            src="./assets/images/logo.png"
+            alt="deewan logo"
+          />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#featured-car" class="navbar-link" data-nav-link>
+                Explore cars
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>About us</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="header-contact">
+            <a href="tel:+918742970006" class="contact-link">+91 8742970006</a>
+
+            <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+          </div>
+
+          <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+            <ion-icon name="car-outline"></ion-icon>
+
+            <span id="aria-label-txt">Explore cars</span>
+          </a>
+
+          <a id="myBtn" href="#" class="btn user-btn" aria-label="Profile">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+          <a
+            id="profile"
+            href="#"
+            class="btn user-btn"
+            style="display: none"
+            aria-label="Profile"
+          >
+            <ion-icon name="person-outline"></ion-icon>
+            <img
+              height="32"
+              width="32"
+              src="https://nationaltoday.com/wp-content/uploads/2022/07/lkjhgfhjkl-6-min-10-640x514.jpg.webp"
+            />
+          </a>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="wrapper">
+                <h5 class="close">&#x2715;</h5>
+                <div class="title-text">
+                  <div class="title login">Login Form</div>
+                  <div class="title signup">Signup Form</div>
+                </div>
+                <div class="form-container">
+                  <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked />
+                    <input type="radio" name="slide" id="signup" />
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slider-tab"></div>
+                  </div>
+                  <div class="form-inner">
+                    <form action="#" class="login">
+                      <div class="field">
+                        <input
+                          id="email"
+                          type="text"
+                          placeholder="Email Address"
+                          required
+                        />
+                      </div>
+                      <div class="field">
+                        <input
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div class="pass-link">
+                        <button id="resetpass" href="#">
+                          Forgot password?
+                        </button>
+                      </div>
+                      <div id="submit" class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login" />
+                      </div>
+                      <div class="signup-link">
+                        Not a member?
+                        <a href="">Signup now</a>
+                      </div>
+                    </form>
+                    <form class="signup" id="create-acct">
+                      <div class="field">
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Name"
+                          required
+                        />
+                      </div>
+                      <div class="field">
+                        <input
+                          id="email-signup"
+                          type="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                      <div class="field">
+                        <input
+                          id="password-signup"
+                          type="password"
+                          placeholder="Password"
+                          required
+                        />
+                      </div>
+                      <button id="create-acct-btn" class="field btn">
+                        <!-- <div class="btn-layer"></div> -->
+                        <!-- <input type="submit" value="Signup" /> -->
+                        Sign Up
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0"
+    >
+      <!--Main Col-->
+      <div
+        id="profile"
+        class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0"
+      >
+        <div class="p-4 md:p-12 text-center lg:text-left">
+          <!-- Image for mobile view-->
+          <div
+            class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
+            style="
+              background-image: url('https://source.unsplash.com/MP0IUfwrn0A');
+            "
+          ></div>
+
+          <h1 class="text-3xl font-bold pt-8 lg:pt-0">Profile</h1>
+          <div
+            class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"
+          ></div>
+          <!-- input -->
+          <div
+            class="my-2 border border-[2px] xl:mx-0 sm:mx-auto w-10/12 justify-center flex items-center rounded-md shadow-md"
+          >
+            <div>
+              <button
+                type=" submit"
+                class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                >
+                  <g id="surface1">
+                    <path
+                      style="
+                        stroke: none;
+                        fill-rule: nonzero;
+                        fill: rgb(0%, 0%, 0%);
+                        fill-opacity: 1;
+                      "
+                      d="M 9.988281 0.769531 C 11.699219 0.769531 13.089844 2.160156 13.089844 3.867188 L 13.089844 5.214844 C 13.089844 6.925781 11.699219 8.316406 9.988281 8.316406 C 8.28125 8.316406 6.890625 6.925781 6.890625 5.214844 L 6.890625 3.867188 C 6.890625 2.160156 8.28125 0.769531 9.988281 0.769531 M 9.988281 0.109375 C 7.921875 0.109375 6.230469 1.800781 6.230469 3.867188 L 6.230469 5.214844 C 6.230469 7.28125 7.921875 8.972656 9.988281 8.972656 C 12.054688 8.972656 13.746094 7.28125 13.746094 5.214844 L 13.746094 3.867188 C 13.746094 1.800781 12.054688 0.109375 9.988281 0.109375 Z M 9.988281 0.109375 "
+                    />
+                    <path
+                      style="
+                        stroke: none;
+                        fill-rule: nonzero;
+                        fill: rgb(0%, 0%, 0%);
+                        fill-opacity: 1;
+                      "
+                      d="M 12.203125 10.175781 C 14.660156 10.636719 16.484375 12.820312 16.484375 15.332031 L 16.484375 19.210938 L 3.492188 19.210938 L 3.492188 15.332031 C 3.492188 12.820312 5.320312 10.636719 7.773438 10.175781 C 8.472656 10.5 9.21875 10.667969 9.988281 10.667969 C 10.761719 10.667969 11.503906 10.5 12.203125 10.175781 M 12.105469 9.488281 C 11.46875 9.820312 10.75 10.007812 9.988281 10.007812 C 9.226562 10.007812 8.507812 9.820312 7.871094 9.488281 C 5.03125 9.914062 2.835938 12.378906 2.835938 15.332031 L 2.835938 19.222656 C 2.835938 19.578125 3.125 19.867188 3.480469 19.867188 L 16.496094 19.867188 C 16.851562 19.867188 17.144531 19.578125 17.144531 19.222656 L 17.144531 15.332031 C 17.144531 12.378906 14.945312 9.914062 12.105469 9.488281 Z M 12.105469 9.488281 "
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+
+            <div class="w-full">
+              <input
+                type="search"
+                x-model="input1"
+                class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+          <div
+            class="my-2 border border-[2px] xl:mx-0 sm:mx-auto w-10/12 justify-center flex items-center rounded-md shadow-md"
+          >
+            <div>
+              <button
+                type=" submit"
+                class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-white"
+              >
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                >
+                  <g id="surface1">
+                    <path
+                      style="
+                        stroke: none;
+                        fill-rule: nonzero;
+                        fill: rgb(0.392157%, 0%, 0.784314%);
+                        fill-opacity: 1;
+                      "
+                      d="M 19.550781 15.804688 L 16.460938 12.714844 C 15.847656 12.105469 14.828125 12.121094 14.191406 12.757812 L 12.636719 14.316406 C 12.539062 14.261719 12.4375 14.203125 12.328125 14.144531 C 11.347656 13.601562 10 12.855469 8.585938 11.4375 C 7.167969 10.019531 6.417969 8.671875 5.875 7.6875 C 5.816406 7.582031 5.761719 7.484375 5.707031 7.386719 L 6.75 6.34375 L 7.265625 5.832031 C 7.902344 5.191406 7.917969 4.175781 7.304688 3.558594 L 4.21875 0.472656 C 3.601562 -0.144531 2.582031 -0.125 1.945312 0.511719 L 1.074219 1.390625 L 1.101562 1.414062 C 0.808594 1.785156 0.5625 2.214844 0.382812 2.679688 C 0.214844 3.117188 0.109375 3.539062 0.0625 3.960938 C -0.34375 7.34375 1.199219 10.433594 5.394531 14.625 C 11.1875 20.421875 15.859375 19.984375 16.0625 19.960938 C 16.5 19.910156 16.921875 19.804688 17.347656 19.640625 C 17.808594 19.460938 18.238281 19.214844 18.609375 18.925781 L 18.628906 18.941406 L 19.511719 18.078125 C 20.148438 17.441406 20.164062 16.421875 19.550781 15.804688 Z M 18.824219 17.390625 L 18.4375 17.777344 L 18.28125 17.929688 C 18.039062 18.164062 17.613281 18.496094 17 18.734375 C 16.648438 18.871094 16.304688 18.957031 15.953125 19 C 15.910156 19.003906 11.515625 19.378906 6.078125 13.941406 C 1.457031 9.316406 0.714844 6.652344 1.023438 4.074219 C 1.0625 3.730469 1.148438 3.386719 1.285156 3.027344 C 1.53125 2.40625 1.859375 1.984375 2.09375 1.742188 L 2.632812 1.199219 C 2.890625 0.941406 3.292969 0.917969 3.53125 1.15625 L 6.621094 4.246094 C 6.855469 4.480469 6.835938 4.886719 6.578125 5.148438 L 4.492188 7.230469 L 4.683594 7.554688 C 4.792969 7.734375 4.90625 7.9375 5.027344 8.15625 C 5.601562 9.191406 6.382812 10.609375 7.902344 12.121094 C 9.414062 13.636719 10.828125 14.421875 11.859375 14.992188 C 12.082031 15.117188 12.285156 15.230469 12.46875 15.339844 L 12.792969 15.53125 L 14.878906 13.445312 C 15.136719 13.1875 15.542969 13.167969 15.777344 13.402344 L 18.867188 16.492188 C 19.101562 16.726562 19.082031 17.132812 18.824219 17.390625 Z M 18.824219 17.390625 "
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+
+            <div class="w-full">
+              <input
+                type="email"
+                x-model="input1"
+                class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                placeholder="Phone Number"
+              />
+            </div>
+          </div>
+          <div
+            class="my-2 border border-[2px] xl:mx-0 sm:mx-auto w-10/12 justify-center flex items-center rounded-md shadow-md"
+          >
+            <div>
+              <button
+                type=" submit"
+                class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                >
+                  <g id="surface1">
+                    <path
+                      style="
+                        stroke: none;
+                        fill-rule: nonzero;
+                        fill: rgb(0%, 0%, 0%);
+                        fill-opacity: 1;
+                      "
+                      d="M 15.511719 7.550781 L 14.898438 7.550781 L 14.898438 5.210938 C 14.898438 2.402344 12.867188 0.199219 9.976562 0.199219 C 7.074219 0.199219 5.101562 2.449219 5.101562 5.210938 L 5.101562 7.550781 L 4.488281 7.550781 C 3.136719 7.550781 2.039062 8.648438 2.039062 10 L 2.039062 17.351562 C 2.039062 18.703125 3.136719 19.800781 4.488281 19.800781 L 15.511719 19.800781 C 16.863281 19.800781 17.960938 18.703125 17.960938 17.351562 L 17.960938 10 C 17.960938 8.648438 16.863281 7.550781 15.511719 7.550781 Z M 6.324219 5.210938 C 6.324219 3.125 7.753906 1.425781 9.976562 1.425781 C 12.179688 1.425781 13.675781 3.089844 13.675781 5.210938 L 13.675781 7.550781 L 6.324219 7.550781 Z M 16.738281 17.351562 C 16.738281 18.027344 16.1875 18.574219 15.511719 18.574219 L 4.488281 18.574219 C 3.8125 18.574219 3.261719 18.023438 3.261719 17.351562 L 3.261719 10 C 3.261719 9.324219 3.8125 8.773438 4.488281 8.773438 L 15.511719 8.773438 C 16.1875 8.773438 16.738281 9.324219 16.738281 10 Z M 10 11.226562 C 9.324219 11.226562 8.777344 11.773438 8.777344 12.449219 C 8.777344 12.902344 9.023438 13.296875 9.386719 13.511719 L 9.386719 15.511719 C 9.386719 15.851562 9.660156 16.125 10 16.125 C 10.339844 16.125 10.613281 15.851562 10.613281 15.511719 L 10.613281 13.511719 C 10.976562 13.296875 11.222656 12.902344 11.222656 12.449219 C 11.226562 11.773438 10.675781 11.226562 10 11.226562 Z M 10 11.226562 "
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+
+            <div class="w-full">
+              <input
+                type="password"
+                x-model="input1"
+                class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div
+            class="my-2 xl:mx-0 sm:mx-auto w-10/12 justify-center flex items-center rounded-md"
+          >
+            <div class="w-11/12 pt-6 pb-8 flex justify-center">
+              <button
+                class="w-1/2 hover:bg-blue-600 bg-blue-300 text-white font-bold py-2 px-4 rounded-full"
+              >
+                Update
+              </button>
+            </div>
+          </div>
+
+          <!-- end -->
+
+          <div
+            class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between"
+          >
+            <a class="link" href="#" data-tippy-content="@facebook_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@twitter_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Twitter</title>
+                <path
+                  d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@github_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@unsplash_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Unsplash</title>
+                <path
+                  d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@dribble_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Dribbble</title>
+                <path
+                  d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@instagram_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                /></svg
+            ></a>
+            <a class="link" href="#" data-tippy-content="@youtube_handle"
+              ><svg
+                class="h-6 fill-current text-gray-600 hover:text-green-700"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <title>YouTube</title>
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                /></svg
+            ></a>
+          </div>
+
+          <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->
+        </div>
+      </div>
+
+      <!--Img Col-->
+      <div class="w-full lg:w-2/5">
+        <!-- Big profile image for side bar (desktop) -->
+        <img
+          src="https://source.unsplash.com/MP0IUfwrn0A"
+          class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+        />
+        <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
+      </div>
+
+      <!-- Pin to top right corner -->
+      <div class="absolute top-0 right-0 h-12 w-18 p-4">
+        <button class="js-change-theme focus:outline-none">🌙</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script>
+      //Init tooltips
+      tippy(".link", {
+        placement: "bottom",
+      });
+
+      //Toggle mode
+      const toggle = document.querySelector(".js-change-theme");
+      const body = document.querySelector("body");
+      const profile = document.getElementById("profile");
+
+      toggle.addEventListener("click", () => {
+        if (body.classList.contains("text-gray-900")) {
+          toggle.innerHTML = "☀️";
+          body.classList.remove("text-gray-900");
+          body.classList.add("text-gray-100");
+          profile.classList.remove("bg-white");
+          profile.classList.add("bg-gray-900");
+        } else {
+          toggle.innerHTML = "🌙";
+          body.classList.remove("text-gray-100");
+          body.classList.add("text-gray-900");
+          profile.classList.remove("bg-gray-900");
+          profile.classList.add("bg-white");
+        }
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/modelscript.js"></script>
+  </body>
+</html>

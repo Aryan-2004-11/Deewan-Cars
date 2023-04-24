@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/modelstyle.css" />
+         
+
+</head>
+
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <div class="overlay" data-overlay></div>
+    
+          <a href="#" class="logo">
+            <img width="100" height="50" src="./assets/images/logo.png" alt="deewan logo" />
+          </a>
+    
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+              <li>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+    
+              <li>
+                <a href="#featured-car" class="navbar-link" data-nav-link>
+                  Explore cars
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>About us</a>
+              </li>
+    
+              <li>
+                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+              </li>
+            </ul>
+          </nav>
+    
+          <div class="header-actions">
+            <div class="header-contact">
+              <a href="tel:+918742970006" class="contact-link">+91 8742970006</a>
+    
+              <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+            </div>
+    
+            <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+              <ion-icon name="car-outline"></ion-icon>
+    
+              <span id="aria-label-txt">Explore cars</span>
+            </a>
+    
+            <a id="myBtn" href="#" class="btn user-btn" aria-label="Profile">
+              <button id="lbtn"><ion-icon id="myBtn1" name="person-outline"></ion-icon></button>
+              <img id="profile" height="32" width="32" style="border-radius: 50%;object-fit: cover;display: none;" src="https://www.businessinsider.in/thumb/msid-92329156,width-700,resizemode-4,imgsize-29474/tech/apps/news/how-to-check-who-is-looking-at-your-whatsapp-profile-online-status-and-last-seen/whatsapp.jpg"/>
+            </a>
+            
+    
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="wrapper">
+                  <h5 class="close">&#x2715;</h5>
+                  <div class="title-text">
+                    <div class="title login">Login Form</div>
+                    <div class="title signup">Signup Form</div>
+                  </div>
+                  <div class="form-container">
+                    <div class="slide-controls">
+                      <input type="radio" name="slide" id="login" checked />
+                      <input type="radio" name="slide" id="signup" />
+                      <label for="login" class="slide login">Login</label>
+                      <label for="signup" class="slide signup">Signup</label>
+                      <div class="slider-tab"></div>
+                    </div>
+                    <div class="form-inner">
+                      <form action="#" class="login">
+                        <div class="field">
+                          <input id="email" type="text" placeholder="Email Address" required />
+                        </div>
+                        <div class="field">
+                          <input id="password" type="password" placeholder="Password" />
+                        </div>
+                        <div class="pass-link">
+                          <button id="resetpass" href="#">Forgot password?</button>
+                        </div>
+                        <div id="submit" class="field btn">
+                          <div class="btn-layer"></div>
+                          <input type="submit" value="Login" />
+                        </div>
+                        <div class="signup-link">
+                          Not a member?
+                          <a href="">Signup now</a>
+                        </div>
+                      </form>
+                      <form class="signup" id="create-acct">
+                        <div class="field">
+                          <input id="name" type="text" placeholder="Name" required />
+                        </div>
+                        <div class="field">
+                          <input id="email-signup" type="email" placeholder="Email" required />
+                        </div>
+                        <div class="field">
+                          <input id="password-signup" type="password" placeholder="Password" required />
+                        </div>
+                        <button id="create-acct-btn" class="field btn">
+                          <!-- <div class="btn-layer"></div> -->
+                          <!-- <input type="submit" value="Signup" /> -->
+                          Sign Up
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+              <span class="one"></span>
+              <span class="two"></span>
+              <span class="three"></span>
+            </button>
+          </div>
+          
+        </div>
+      </header>
+    
+    <div class="center">
+        <ul>
+            <li>
+                <div class="image">
+                    <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20220228061914_Maruti_Baleno_2022_front.jpg&w=700&q=90&c=1"
+                        alt="">
+
+                    <h4>Aryan</h4>
+                </div>
+                <div style="padding: 40px;">
+                    <div class="text-group">
+                        <div>
+                          <h2>Maruti Baleno</h2>
+                        </div>
+                        <div>
+                        <div >
+                        <table >
+                          <tbody class="Desc">
+                            <tr >
+                              <td class="engine"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557346.png" width="25" height="25" alt="Car engine free icon" title="Car engine free icon"> 
+                              <span class="iconname">Engine</span>
+                              <span>1197 cc</span>
+                              </td>  
+                            </tr>
+                            <tr>
+                              <td class="engine"><img src=" https://cdn-icons-png.flaticon.com/512/2214/2214024.png " width="25" height="25" alt="Car engine free icon" title="Car engine free icon"> 
+                                <span class="iconname">BHP</span>
+                                <span>76.43-88.5 Bhp</span>
+                            </tr> 
+                            <tr>
+                              <td class="engine"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557346.png" width="25" height="25" alt="Car engine free icon" title="Car engine free icon"> 
+                                <span class="iconname">Engine</span>
+                                <span>cc</span>
+                            </tr>
+                            <tr>
+                              <td class="engine"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557346.png" width="25" height="25" alt="Car engine free icon" title="Car engine free icon"> 
+                                <span class="iconname">Engine</span>
+                                <span>cc</span>
+                            </tr>
+                            <tr>
+                              <td class="engine"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557346.png" width="25" height="25" alt="Car engine free icon" title="Car engine free icon"> 
+                                <span class="iconname">Engine</span>
+                                <span>cc</span>
+                            </tr>
+                          </tbody>  
+                        </table>
+                      </div>
+                      <div style="display: flex;">
+                        <div class="advantage"><p>h</p></div>
+                        <div class="advan"><p>l</p></div>
+                      </div>
+
+
+                    </div>
+
+                    <!-- <div class="date-group">
+                        <h4>March 13, 2023</h4>
+                        <p>5:00 PM</p>
+                    </div> -->
+                </div>
+
+            </li>
+            <li>
+                <div class="image">
+                    <img src="https://www.cartoq.com/wp-content/uploads/2022/05/fortuner-gr-s-2.jpg"
+                        alt="">
+
+                    <h4>Porter Robinson</h4>
+                </div>
+                <div style="justify-content: space-between; display: flex;width: 100%;">
+                    <div class="text-group">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, sint sit! Vitae
+                        quisquam alias nulla!
+                        <table>
+                            <tr style="display: flex; flex-direction: column;">
+                                <td>fgf</td>
+                                <td>fgfg</td>
+                                <td> fgfg </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+                    <div class="date-group">
+                        <h4>March 13, 2023</h4>
+                        <p>5:00 PM</p>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="image">
+                    <img src="https://imgnew.outlookindia.com/public/uploads/articles/2019/6/24/swift_1_20190624.jpg" alt="">
+
+                    <h4>Porter Robinson</h4>
+                </div>
+                <div style="justify-content: space-between; display: flex;width: 100%;">
+                    <div class="text-group">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, sint sit! Vitae
+                        quisquam alias nulla!
+                        <table>
+                            <tr style="display: flex; flex-direction: row;">
+                                <td>fgf</td>
+                                <td>fgfg</td>
+                                <td> fgfg </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+                    <div class="date-group">
+                        <h4>March 13, 2023</h4>
+                        <p>5:00 PM</p>
+                    </div>
+                </div>
+
+            </li>
+            
+        </ul>
+    </div>
+
+    <style>
+      .Desc{
+        display: flex;
+        flex-direction: row;
+        /* padding: 10px;
+        margin: 2px; */
+      }
+      .engine{
+          margin: 4px;
+          padding: 50px;
+      }
+      .advantage{
+        flex: 1rem;
+        /* padding: 10px;
+        margin: 2px; */
+      }
+      .advan{
+        /* padding: 10px;
+        margin: 2px; */
+      }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+        }
+
+        .center ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            width: 90%;
+            
+        }
+
+        .center ul {
+            margin-top: 5rem;
+        }
+
+        .center ul li {
+            display: flex;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            color: #000;
+            width: 90%;
+            padding: 1rem 2rem;
+            margin: 1rem 0px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px #00000020;
+            position: relative;
+            transition: all .3s ease;
+            background: #fff;
+            /* background: rgba(0, 0, 0, 0.8); */
+
+        }
+
+        .center ul li:hover:before {
+            content: "";
+            display: flex;
+            width: 8px;
+            height: 100%;
+            background-color: hsl(216, 38%, 95%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: -1.5rem;
+            border-radius: 25px;
+            /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.162); */
+        }
+
+        .center ul li:hover {
+            transform: translateX(15px);
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+
+        .text-group {
+            margin: 10px;
+            width: 40%;
+            text-align: left;
+        }
+
+        /* Small Screens */
+        @media only screen and (max-width: 576px) {
+            .center ul li:hover {
+                transform: none;
+            }
+
+            .date-group {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: right;
+            }
+        }
+
+        /* Medium Screens */
+        @media only screen and (max-width: 768px) {
+            .center li {
+                flex-direction: column;
+            }
+
+            .center li>div {
+                margin: 1rem 0px;
+            }
+
+            .text-group {
+                width: 80%;
+                text-align: left;
+            }
+
+            .date-group {
+                display: flex;
+            }
+
+            .date-group h4,
+            p {
+                margin: 0px .5rem;
+            }
+            .Engine{
+              padding: 5px;
+            }
+        }
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/modelscript.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

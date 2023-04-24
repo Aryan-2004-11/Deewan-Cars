@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deewan Cars - Rent your favourite car</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/modelstyle.css" />
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img width="100" height="50" src="./assets/images/logo.png" alt="deewan logo" />
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#featured-car" class="navbar-link" data-nav-link>
+              Explore cars
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-contact">
+          <a href="tel:+918742970006" class="contact-link">+91 8742970006</a>
+
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <a id="myBtn" href="#" class="btn user-btn" aria-label="Profile">
+          <button id="lbtn"><ion-icon id="myBtn1" name="person-outline"></ion-icon></button>
+          <img id="profile" height="32" width="32" style="border-radius: 50%;object-fit: cover;display: none;" src="https://www.businessinsider.in/thumb/msid-92329156,width-700,resizemode-4,imgsize-29474/tech/apps/news/how-to-check-who-is-looking-at-your-whatsapp-profile-online-status-and-last-seen/whatsapp.jpg"/>
+        </a>
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="wrapper">
+              <h5 class="close">&#x2715;</h5>
+              <div class="title-text">
+                <div class="title login">Login Form</div>
+                <div class="title signup">Signup Form</div>
+              </div>
+              <div class="form-container">
+                <div class="slide-controls">
+                  <input type="radio" name="slide" id="login" checked />
+                  <input type="radio" name="slide" id="signup" />
+                  <label for="login" class="slide login">Login</label>
+                  <label for="signup" class="slide signup">Signup</label>
+                  <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                  <form action="#" class="login">
+                    <div class="field">
+                      <input id="email" type="text" placeholder="Email Address" required />
+                    </div>
+                    <div class="field">
+                      <input id="password" type="password" placeholder="Password" />
+                    </div>
+                    <div class="pass-link">
+                      <button id="resetpass" href="#">Forgot password?</button>
+                    </div>
+                    <div id="submit" class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Login" />
+                    </div>
+                    <div class="signup-link">
+                      Not a member?
+                      <a href="">Signup now</a>
+                    </div>
+                  </form>
+                  <form class="signup" id="create-acct">
+                    <div class="field">
+                      <input id="name" type="text" placeholder="Name" required />
+                    </div>
+                    <div class="field">
+                      <input id="email-signup" type="email" placeholder="Email" required />
+                    </div>
+                    <div class="field">
+                      <input id="password-signup" type="password" placeholder="Password" required />
+                    </div>
+                    <button id="create-acct-btn" class="field btn">
+                      <!-- <div class="btn-layer"></div> -->
+                      <!-- <input type="submit" value="Signup" /> -->
+                      Sign Up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+      </div>
+      
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="h1 hero-title">The easy way to takeover a lease</h2>
+
+            <p class="hero-text">
+              Live in Delhi NCR, Noida and Greater Noida!
+            </p>
+          </div>
+
+          <div class="hero-banner"></div>
+
+          <form action="" class="hero-form">
+            <div class="input-wrapper">
+              <label for="input-1" class="input-label">
+                Car, model, or brand
+              </label>
+
+              <input type="text" name="car-model" id="input-1" class="input-field"
+                placeholder="What car are you looking?" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="input-2" class="input-label">
+                Max. payment
+              </label>
+
+              <input type="text" name="monthly-pay" id="input-2" class="input-field"
+                placeholder="Add an amount in ₹ " />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="input-3" class="input-label">
+                Your Contact Number
+              </label>
+
+              <input type="text" name="year" id="input-3" class="input-field" placeholder="Write your mobile number" />
+            </div>
+            <button type="submit" class="btn">Enquire now</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- 
+        - #FEATURED CAR
+      -->
+
+      <section class="section featured-car" id="featured-car">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Featured cars</h2>
+
+            <a href="#" class="featured-car-link">
+              <span>View more</span>
+
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="featured-car-list">
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20220228061914_Maruti_Baleno_2022_front.jpg&w=700&q=90&c=1" alt="BALENO" loading="lazy" width="440" height="300"
+                    class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Baleno</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">25km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;2000</strong>
+                      / day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://imgnew.outlookindia.com/public/uploads/articles/2019/6/24/swift_1_20190624.jpg" alt="SWIFT 2019" loading="lazy" width="440" height="300"
+                    class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Swift</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">22km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;1800 </strong>
+                      / day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Glanza/8903/1647336836077/front-left-side-47.jpg?tr=w-456" alt="Glanza" loading="lazy" width="440"
+                    height="300" class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Glanza</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">25km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;2000</strong>
+                      / day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://www.cartoq.com/wp-content/uploads/2022/05/fortuner-gr-s-2.jpg" alt="Systumm" loading="lazy" width="440"
+                    height="300" class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Fortuner</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Diesel</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">8km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;5000</strong>
+                      / day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/9710/1677914238296/front-left-side-47.jpg?tr=w-456" alt="Honda City" loading="lazy" width="440"
+                    height="300" class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Honda City</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">23km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;3000</strong>
+                      / day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="https://www.indiacarnews.com/wp-content/uploads/2018/11/New-Maruti-Ertiga-2018-Engine.jpg" alt="Honda Ertiga" loading="lazy" width="440" height="300"
+                    class="w-100" />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Honda Ertiga</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">4 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Diesel</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">24km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Manual</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>&#8377;4000</strong>
+                      /day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #GET START
+      -->
+
+      <section class="section get-start">
+        <div class="container">
+          <h2 class="h2 section-title">Get started with 4 simple steps</h2>
+
+          <ul class="get-start-list">
+            <li>
+              <div class="get-start-card">
+                <div class="card-icon icon-1">
+                  <ion-icon name="person-add-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Create a profile</h3>
+
+                <p class="card-text">
+                  If you are going to use a passage of Lorem Ipsum, you need
+                  to be sure.
+                </p>
+
+                <a href="#" class="card-link">Get started</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+                <div class="card-icon icon-2">
+                  <ion-icon name="car-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Tell us what car you want</h3>
+
+                <p class="card-text">
+                  Various versions have evolved over the years, sometimes by
+                  accident, sometimes on purpose
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+                <div class="card-icon icon-3">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Match with seller</h3>
+
+                <p class="card-text">
+                  It to make a type specimen book. It has survived not only
+                  five centuries, but also the leap into electronic
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+                <div class="card-icon icon-4">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Make a deal</h3>
+
+                <p class="card-text">
+                  There are many variations of passages of Lorem available,
+                  but the majority have suffered alteration
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #Review
+      -->
+
+      <section class="section blog" id="blog">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-right: 10px;">
+              <h2 class="h2 section-title">Our Reviews</h2>
+
+              <a href="#featured-car" class="addbtn btn" aria-labelledby="aria-label-txt">
+                <!-- <ion-icon name="plus">+</ion-icon> -->
+      
+                <span id="aria-label-txt">+</span>
+              </a>
+
+
+          </div>
+          <ul class="blog-list has-scrollbar">
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="https://www.cartoq.com/wp-content/uploads/2022/07/fortuner-modified-featured.jpg" alt="Systumm" loading="lazy"
+                      class="w-100" />
+                  </a>
+
+                  <a href="#" class="btn card-badge">Nitin Yadav</a>
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Very nice services and the car was in very good conditions.</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-01-14">January 14, 2023</time>
+                    </div>
+
+                    <div class="comments">
+                      <ion-icon name="heart-outline"></ion-icon>
+                      <data value="114">214</data>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="https://www.team-bhp.com/?q=sites/default/files/styles/check_extra_large_for_review/public/IMG20220901WA0009.jpg" alt="What cars are most vulnerable" loading="lazy"
+                      class="w-100" />
+                  </a>
+
+                  <a href="#" class="btn card-badge">Mukesh</a>
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Love the experience and the services I got from here and rates are very genuine</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-01-14">January 15, 2023</time>
+                    </div>
+
+                    <div class="comments">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <data value="114">154</data>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="https://stat.overdrive.in/wp-content/uploads/2022/08/maruti-baleno-lt-01-900x506.jpg" alt="Statistics showed which average age" loading="lazy"
+                      class="w-100" />
+                  </a>
+
+                  <a href="#" class="btn card-badge">Shubham</a>
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Car was in very good condition and overall experience was smooth</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-01-14">January 14, 2022</time>
+                    </div>
+
+                    <div class="comments">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <data value="114">214</data>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20200630125431_Honda-City-2020-front.jpg&w=736&h=488&q=75&c=1" alt="What´s required when renting a car?" loading="lazy"
+                      class="w-100" />
+                  </a>
+
+                  <a href="#" class="btn card-badge">Akaash</a>
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Nice experience with the supoort team whenever contacted to them good experience</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-01-14">March 17, 2023</time>
+                    </div>
+
+                    <div class="comments">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <data value="114">184</data>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="https://cdn.24.co.za/files/Cms/General/d/10029/19a72fa9aee04fc7b8b963ff39b06c35.jpg" alt="New rules for handling our cars" loading="lazy"
+                      class="w-100" />
+                  </a>
+
+                  <a href="#" class="btn card-badge">Aryan</a>
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">HAd a very good and smooth experience of the trip . Love the services</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-01-14">January 24, 2023</time>
+                    </div>
+
+                    <div class="comments">
+                      
+                      <ion-icon name="heart-outline"></ion-icon>
+                      <data value="114">104</data>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img width="100" height="50" src="./assets/images/logo.png" alt="deewan logo" />
+          </a>
+
+          <p class="footer-text">
+            Search for cheap rental cars in Delhi NCR. With a diverse fleet of
+            19,000 vehicles, Waydex offers its consumers an attractive and fun
+            selection.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Neighborhoods in Delhi NCR</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Manhattan</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Central Delhi NCR City</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Upper East Side</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Queens</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Theater District</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Midtown</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">SoHo</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chelsea</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          &copy;
+          <a href="#">Akash Gandhar, PHONE: 7060996626</a>
+          . All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/modelscript.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script type="module" src="./assets/js/auth.js"></script>
+</body>
+
+</html>
